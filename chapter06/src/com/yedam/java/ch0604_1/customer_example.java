@@ -26,5 +26,21 @@ public static void main(String[] args) {
 			System.out.println("시스템 종료");
 		}
 		
+		//
+		Access access = new Access();
+//		1) public
+		access.free = "public";
+		access.free();
+//		2) private
+//		access.privacy = "privacy";
+//		access.privacy();
+//		3) protected
+		access.parent = "parent";
+//		4) default
+		access.basic = "basic";
+		
+		
+		
+		
 	}
 }
