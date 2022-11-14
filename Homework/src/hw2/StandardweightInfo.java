@@ -15,7 +15,7 @@ public class StandardweightInfo extends Human{
 	public void getInformation() {
 		super.getInformation();
 		// 표준체중도 출력 //  메소드 안에 메소드가 드가지노..?
-		System.out.println("표준체중" + getStandardWeight() );
+		System.out.println("표준체중 " + getStandardWeight() +"입니다.");
 		}
 
 	
