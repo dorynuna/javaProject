@@ -124,8 +124,8 @@ public class EmpManagement {
 	}
 	
 	private void deleteEmp() {
-		EmpVO empVO = inputEmpNo();
-		empDAO.update(empVO);
+		int empNO = inputEmpNo();
+		empDAO.update(empNO);
 	}
 	
 	private  int inputEmpNo( ) { // 리턴되는게 있으니까 뿌라이빗 인트!

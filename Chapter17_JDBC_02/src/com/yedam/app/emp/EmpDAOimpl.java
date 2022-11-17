@@ -150,4 +150,10 @@ public class EmpDAOimpl extends DAO implements EmpDAO {
 		
 	}
 
+	@Override
+	public void update(int empNO) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
