@@ -1,14 +1,11 @@
 package common;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 
 public class DAO {
@@ -23,51 +20,37 @@ public class DAO {
 	protected  PreparedStatement pstmt;
 	protected ResultSet rs;
 	
-	public DAO() {
-		dbConfig();
-	}
-	
-	//DB에 접속하는 메소드
+	// 연결
+	// CONNECTION
 	public void connect() {
 		try {
 			Class.forName(jdbcDriver);
 			
 			conn = DriverManager.getConnection(jdbcUrl);
-		}catch(ClassNotFoundException e) {
-			System.out.println("jdbc driver 로딩 실패");
-		}catch(SQLException e) {
-			System.out.println("DB 연결 실패");
-		}			
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("JDBC DRIVER LOADING FAIL");
+		} catch (SQLException e ) {
+			System.out.println("DATABASE CONNECTION FAIL");
+		}
 	}
 	
-	//DB 정보를 가져오는 메소드
-	private void dbConfig() {
-		String resource = "config/db.properties";
-		Properties properties = new Properties();
-		
-		try {
-			String filePath 
-			= ClassLoader.getSystemClassLoader()
-				.getResource(resource)
-				.getPath();
-			properties.load(new FileInputStream(filePath));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		jdbcDriver = properties.getProperty("driver");
-		jdbcUrl = properties.getProperty("url");
-	}
-	//DB 접속을 해제하는 메소드
+	// 연결해제
 	public void disconnect() {
 		try {
-			if(rs != null) rs.close();
-			if(pstmt != null) pstmt.close();
-			if(stmt != null) stmt.close();
-			if(conn != null) conn.close();
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-	}
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			if (pstmt != null)
+				pstmt.close();
+			if (conn != null)
+				conn.close();
 
+		} catch (SQLException e) {
+			System.out.println("정상적으로 자원이 해제 되지 않았습니다");
+		}
+
+		
+	}
 }

@@ -113,10 +113,10 @@ public class EmpDAOimpl extends DAO implements EmpDAO {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, empVO.getFirstName());
 			pstmt.setInt(2, empVO.getEmpNo());
-			
+
 			int result = pstmt.executeUpdate();
 
-			if (result > 0 ) {
+			if (result > 0) {
 				System.out.println("정상적으로 수정되었습니다.");
 			} else {
 				System.out.println("정상적으로 수정되지 않았습니다.");
@@ -136,24 +136,18 @@ public class EmpDAOimpl extends DAO implements EmpDAO {
 			stmt = conn.createStatement();
 			String sql = "DELETE FROM employees WHERE emp_no = " + empNo;
 			int result = stmt.executeUpdate(sql);
-			if(result>0) {
+			if (result > 0) {
 				System.out.println("정상적으로 삭제되었습니다.");
 			} else {
 				System.out.println("정삭적으로 삭제되지않았습니다");
 			}
-					
-		} catch(Exception e) {
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			disconnect();
 		}
-		
-	}
 
-	@Override
-	public void update(int empNO) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

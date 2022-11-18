@@ -125,7 +125,7 @@ public class EmpManagement {
 	
 	private void deleteEmp() {
 		int empNO = inputEmpNo();
-		empDAO.update(empNO);
+		empDAO.delete(empNO);
 	}
 	
 	private  int inputEmpNo( ) { // 리턴되는게 있으니까 뿌라이빗 인트!

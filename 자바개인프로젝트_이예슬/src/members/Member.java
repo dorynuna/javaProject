@@ -9,7 +9,7 @@ public class Member {
 	private String Name;
 	private String Sex;
 	private String Birth;
-	private String Add;
+	private String Address;
 	private String Tel;
 
 	// 게터,세터
@@ -61,12 +61,14 @@ public class Member {
 		Birth = birth;
 	}
 
-	public String getAdd() {
-		return Add;
+
+
+	public String getAddress() {
+		return Address;
 	}
 
-	public void setAdd(String add) {
-		Add = add;
+	public void setAddress(String address) {
+		Address = address;
 	}
 
 	public String getTel() {
@@ -81,7 +83,7 @@ public class Member {
 	@Override
 	public String toString() {
 		return "Member [Id=" + Id + ", Pw=" + Pw + ", Role=" + Role + ", Name=" + Name + ", Sex=" + Sex + ", Birth="
-				+ Birth + ", Add=" + Add + ", Tel=" + Tel + "]";
+				+ Birth + ", Address=" + Address + ", Tel=" + Tel + "]";
 	}
 
 }
