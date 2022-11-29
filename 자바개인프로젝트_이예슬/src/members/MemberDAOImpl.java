@@ -120,7 +120,7 @@ public class MemberDAOImpl extends DAO implements MemberDAO {
 			connect();
 			stmt = conn.createStatement();
 			// 회원 아이디를 입력하여 그 줄의 정보를 삭제
-			String sql = " DELETE FROM Member WHERE id = " + memberNo;
+			String sql = " DELETE FROM Member WHERE id = '" + memberNo+"'";
 			int result = stmt.executeUpdate(sql);
 			if (result > 0) {
 				System.out.println(" 정상적으로 삭제 되었습니다. ");

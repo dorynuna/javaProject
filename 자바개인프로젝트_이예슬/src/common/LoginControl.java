@@ -31,9 +31,11 @@ public class LoginControl {
 	}
 
 	private void menuPrint() {
-		System.out.println("==============");
+		System.out.println("============================");
+		System.out.println("예담문화센터에 오신것을 환영합니다.");
+		System.out.println(" ");
 		System.out.println("1.로그인  2.종료");
-		System.out.println("==============");
+		System.out.println("============================");
 	}
 
 	private int menuSelect() {

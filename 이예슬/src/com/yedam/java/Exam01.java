@@ -3,7 +3,7 @@ package com.yedam.java;
 public class Exam01 {
 	public static void main(String[] args) {
 		
-		int x = 10;
+		int x = 1  0;
 		double y =2.0;
 		System.out.println(y);
 		int result1 = (int) (x + y);

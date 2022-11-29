@@ -48,6 +48,7 @@ public class LoginRole {
 
 	protected void menuPrint() {
 		System.out.println("=========================");
+		System.out.println(" ");
 		System.out.println("1.회원관리 2.수강신청 3.로그아웃");
 		System.out.println("=========================");
 	}

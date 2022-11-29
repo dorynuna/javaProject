@@ -51,6 +51,8 @@ public class MemberManagement extends LoginRole{
 	// 0. 메뉴출력
 	protected void menuPrint() {
 		System.out.println("==================================================");
+		System.out.println(" 관리자 전용 페이지입니다.");
+		System.out.println(" ");
 		System.out.println(" 1. 회원등록 | 2.회원수정 | 3.회원삭제 | 4.전체조회 | 5.단건조회 | 6.종료");
 		System.out.println("==================================================");
 	}
@@ -120,9 +122,10 @@ public class MemberManagement extends LoginRole{
 	private String inputMemNo() {
 		String memberNo = null;
 		try {
+			System.out.println("삭제할 회원의 아이디를 입력하세요");
 			memberNo = sc.nextLine();
 		} catch (NumberFormatException e) {
-			System.out.println("삭제할 회원의 이름을 정확히 입력하세요");
+			System.out.println("삭제할 회원의 아이디를 정확히 입력하세요");
 		}
 		return memberNo;
 	}

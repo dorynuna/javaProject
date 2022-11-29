@@ -1,6 +1,6 @@
 package course;
 
-public class Course {
+public class CourseVO {
 	// VO
 	// 수강신청의 변수들
 	// 수강코드/강좌명/강사명/요일/시간/수강료/기간
